@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/refin.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/refin.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AN Travels Udupi | Services, Reviews & Cab Rentals in Karnataka</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <!-- SEO / OG / Twitter -->
+    <meta name="description" content="AN Travels Udupi offers reliable car rental in Karnataka. Book affordable outstation cabs, airport taxis, luxury cars, and tempo traveller hire for any trip.">
+    <meta name="keywords" content="car rental Udupi, taxi service Udupi, AN Travels Udupi, outstation cabs, airport taxi, luxury car rental, tempo traveller hire">
+    <meta name="author" content="AN Travels Udupi">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://antravelsudupi.com/services">
+
+    <meta property="og:title" content="AN Travels Udupi | Reliable Car Rentals" />
+    <meta property="og:description" content="Affordable & reliable cab rentals for airport transfers, city tours, and outstation travel." />
+    <meta property="og:image" content="https://antravelsudupi.com/images/navbar,footer/refined%20png.png" />
+    <meta property="og:url" content="https://antravelsudupi.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AN Travels Udupi" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AN Travels Udupi | Reliable Car Rentals">
+    <meta name="twitter:description" content="AN Travels Udupi offers reliable car rental in Karnataka. Book affordable outstation cabs, airport taxis, luxury cars, and tempo traveller hire for any trip.">
+    <meta name="twitter:image" content="https://antravelsudupi.com/images/navbar,footer/refined%20black.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://antravelsudupi.com/#travelagency",
+      "name": "AN Travels Udupi",
+      "url": "https://antravelsudupi.com/",
+      "logo": "https://antravelsudupi.com/images/navbar,footer/refined%20png.png"
+    }
+  ]
+}
+</script>
+    <style>
+        :root {
+            --primary-yellow: #FFD700;
+            --secondary-yellow: #FFC107;
+            --light-bg: #F8F8F8;
+            --off-white: #FAFAFA;
+            --card-bg: #F5F5F5;
+            --medium-gray: #E0E0E0;
+            --dark-text: #333333;
+            --muted-text: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--light-bg);
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            left: 0;
+            width: 100vw;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .wave-extra {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 40vh;
+            opacity: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--light-gray) 100%);
+            color: var(--dark-text);
+            padding: 6rem 2rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 3.5rem);
+            color: var(--dark-text);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            color: var(--muted-text);
+            font-size: 1.05rem;
+        }
+
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            color: var(--primary-yellow);
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1rem;
+            color: var(--muted-text);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--medium-gray);
+            border-radius: 4px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-yellow);
+            background-color: rgba(255, 215, 0, 0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(255, 215, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark-text);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--muted-text);
+            line-height: 1.6;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--medium-gray);
+            transition: all 0.3s ease;
+        }
+
+        .dot.is-active {
+            background-color: var(--primary-yellow);
+            transform: scale(1.2);
+        }
+
+        .review-card {
+            background: var(--light-gray);
+            border: 1px solid var(--medium-gray);
+            border-radius: 4px;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 5rem;
+            right: 22.5px;
+            width: 56px;
+            height: 56px;
+            background: var(--primary-yellow);
+            border: 1px solid var(--secondary-yellow);
+            color: #fff;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--secondary-yellow);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(255, 215, 0, 0.4);
+        }
+
+        @media (max-width: 700px) {
+            .reviews-container {
+                max-width: 100%;
+                height: 300px;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .service-icon {
+                font-size: 2.5rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .service-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="scroll-to-top" title="Scroll to Top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <div id="navbar"></div>
+
+    <div class="hero">
+        <h1>Reliable Car & Bus Rental in Karnataka</h1>
+        <p><i>Your trusted partner for airport transfers, outstation cabs, luxury cars, and tempo traveller hire for any occasion.</i></p>
+    </div>
+
+    <div class="services-section-outer">
+        <section class="services-section-inner content-wrapper" id="our-services">
+            <h2 class="section-title">Our Premier Udupi Taxi Services</h2>
+            <p class="section-subtitle"><i>We've designed our services to meet every travel need, ensuring comfort,
+                    safety, and reliability on every journey.</i></p>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="service-icon"><i class="fas fa-gem"></i></span>
+                    <h3>Wedding & Special Occasion Transport</h3>
+                    <p>Make your wedding day seamless and elegant with AN Tours & Travels. We specialize in luxury car rental in Bangalore, offering a dedicated fleet of vehicles to ensure your entire wedding party and all your guests arrive on time and in style.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="service-icon"><i class="fas fa-building"></i></span>
+                    <h3>Corporate & Business Solutions</h3>
+                    <p>Ensure professionalism and punctuality for your corporate travel with our tailored services. We offer comprehensive corporate employee transport solutions in Bangalore, designed to meet all your business needs.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="service-icon"><i class="fas fa-map-marked-alt"></i></span>
+                    <h3>Outstation & Inter-City Travel</h3>
+                    <p>Explore beyond the city limits with our reliable outstation cabs Bangalore. Whether it's a family vacation, a spiritual pilgrimage, or a weekend adventure, our services ensure a smooth and safe trip.
+
+                        We provide affordable outstation taxi from Bangalore.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <span class="service-icon"><i class="fas fa-plane-departure"></i></span>
+                    <h3>Airport Transfers (24/7)</h3>
+                    <p>Start or end your journey without any stress with our airport taxi Bangalore service. We offer reliable, round-the-clock airport pick-up and drop-off, with drivers who monitor flight schedules to guarantee a timely arrival. Enjoy a comfortable and efficient transfer to or from your terminal.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <span class="service-icon"><i class="fas fa-city"></i></span>
+                    <h3>Local City Tours & Rentals</h3>
+                    <p>Experience the city at your own pace with our flexible transport services. Our reliable city tour taxi in Bangalore is perfect for sightseeing, business meetings, or day-to-day errands.You can also opt for a flexible car rental Bangalore service,offering you ultimate convenience and freedom to explore.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <span class="service-icon"><i class="fas fa-users"></i></span>
+                    <h3>Group & Event Logistics</h3>
+                    <p>Simplify travel for any group size with our comprehensive logistics planning. We specialize in coordinating transport for large groups, including school trips, corporate employee transport solutions Bangalore, and family gatherings.Our fleet of vehicles, available for tempo traveller hire Bangalore, are designed for group comfort and safety.
+                    </p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                    <span class="service-icon"><i class="fas fa-box-open"></i></span>
+                    <h3>Personalized Travel Packages</h3>
+                    <p>Your journey, your way. We offer completely customizable Bangalore tour packages to fit your unique needs. Tell us your destination, group size, and preferences, and we'll create a tailored travel plan with a suitable car rental Bangalore or tempo traveller hire Bangalore option that works for your schedule and budget.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero-review">
+            <img src="images/—Pngtree—trust badges with red ribbon_7885135.png" alt="Trust badges with red ribbon"
+                class="hero-review-image">
+            <h1 class="section-title"><i>Our Valued Client Reviews</i></h1>
+            <p>Hear directly from the travelers who trust us with their journeys and experience the AN Travels Udupi difference.</p>
+        </section>
+
+        <section id="reviews" class="content-wrapper">
+            <div class="reviews-container">
+                <div class="cards-wrapper">
+                    <div class="review-card"
+                        style="background-image:url('assets/images/Screenshot_20250903-182058.png');"></div>
+                    <div class="review-card"
+                        style="background-image:url('assets/images/Screenshot_20250903-182107 copy.png');"></div>
+                    <div class="review-card"
+                        style="background-image:url('assets/images/Screenshot_20250903-182107.png');"></div>
+                    <div class="review-card"
+                        style="background-image:url('assets/images/Screenshot_20250903-182115.png');"></div>
+                    <div class="review-card"
+                        style="background-image:url('assets/images/Screenshot_20250903-182130 (1).png');"></div>
+                </div>
+                <button class="review-nav-btn prev-btn" aria-label="Previous Review"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="review-nav-btn next-btn" aria-label="Next Review"><i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="review-dots"></div>
+        </section>
+    </div>
+    <div id="float-buttons-container"></div>
+    <footer></footer>
+    <div class="wave-extra"></div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="./js/floatbtns.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            AOS.init({
+                duration: 800,
+                once: true,
+            });
+
+            const animateOnScroll = (selector, threshold = 0.2) => {
+                const elements = document.querySelectorAll(selector);
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold
+                });
+                elements.forEach(el => observer.observe(el));
+            };
+
+            animateOnScroll('.section-title', 0.5);
+            animateOnScroll('footer', 0.2);
+
+            const reviewsContainer = document.querySelector('.reviews-container');
+            const reviewCards = Array.from(document.querySelectorAll('.review-card'));
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const dotsContainer = document.querySelector('.review-dots');
+            let currentIndex = 0;
+            const totalCards = reviewCards.length;
+
+            let autoScrollInterval;
+            const autoScrollDelay = 5000;
+
+            reviewCards.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('is-active');
+                dotsContainer.appendChild(dot);
+            });
+            const dots = Array.from(dotsContainer.children);
+
+            function updateCardsAndDots() {
+                const prevIndex = (currentIndex - 1 + totalCards) % totalCards;
+                const secondPrevIndex = (currentIndex - 2 + totalCards) % totalCards;
+                const nextIndex = (currentIndex + 1) % totalCards;
+                const secondNextIndex = (currentIndex + 2) % totalCards;
+
+                reviewCards.forEach((card, index) => {
+                    card.className = 'review-card';
+
+                    if (index === currentIndex) card.classList.add('is-active');
+                    else if (index === nextIndex) card.classList.add('is-next');
+                    else if (index === secondNextIndex) card.classList.add('is-second-next');
+                    else if (index === prevIndex) card.classList.add('is-previous');
+                    else if (index === secondPrevIndex) card.classList.add('is-second-previous');
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('is-active', index === currentIndex);
+                });
+            }
+
+            function changeCard(direction) {
+                currentIndex = (direction === 'right' ? currentIndex + 1 : currentIndex - 1 + totalCards) % totalCards;
+                updateCardsAndDots();
+            }
+
+            function startAutoScroll() {
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = setInterval(() => {
+                    changeCard('right');
+                }, autoScrollDelay);
+            }
+
+            function stopAutoScroll() {
+                clearInterval(autoScrollInterval);
+            }
+
+            nextBtn.addEventListener('click', () => changeCard('right'));
+            prevBtn.addEventListener('click', () => changeCard('left'));
+            reviewsContainer.addEventListener('mouseenter', stopAutoScroll);
+            reviewsContainer.addEventListener('mouseleave', startAutoScroll);
+
+            let isDragging = false,
+                startX = 0,
+                endX = 0;
+
+            reviewsContainer.addEventListener('mousedown', handlePointerStart);
+            reviewsContainer.addEventListener('touchstart', handlePointerStart, {
+                passive: true
+            });
+            reviewsContainer.addEventListener('mouseup', handlePointerEnd);
+            reviewsContainer.addEventListener('touchend', handlePointerEnd);
+            reviewsContainer.addEventListener('mouseleave', handlePointerEnd);
+
+            function handlePointerStart(e) {
+                stopAutoScroll();
+                isDragging = true;
+                startX = e.pageX || e.touches[0].pageX;
+                endX = startX;
+            }
+
+            function handlePointerEnd(e) {
+                if (!isDragging) return;
+                isDragging = false;
+                endX = e.pageX || e.changedTouches[0].pageX;
+                const diffX = endX - startX;
+                const threshold = 50;
+
+                if (Math.abs(diffX) > threshold) {
+                    changeCard(diffX > 0 ? 'left' : 'right');
+                    if (e.target.closest('.review-card')) {
+                        e.target.closest('.review-card').addEventListener('click', e => e.preventDefault(), {
+                            once: true
+                        });
+                    }
+                }
+                startX = 0;
+                endX = 0;
+                startAutoScroll();
+            }
+
+            document.querySelectorAll('.review-card').forEach(card => {
+                card.addEventListener('click', e => {
+                    const diffX = Math.abs(endX - startX);
+                    if (diffX > 10) return;
+
+                    const overlay = document.createElement('div');
+                    overlay.className = 'expanded-overlay';
+                    overlay.style.display = 'flex';
+                    const imageUrl = e.currentTarget.style.backgroundImage.slice(5, -2);
+                    overlay.innerHTML = `<img src="${imageUrl}" class="expanded-image">`;
+                    document.body.appendChild(overlay);
+                    overlay.addEventListener('click', () => overlay.remove());
+                });
+            });
+
+            updateCardsAndDots();
+            startAutoScroll();
+        });
+
+        const scrollToTopBtn = document.querySelector(".scroll-to-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add("show");
+            } else {
+                scrollToTopBtn.classList.remove("show");
+            }
+        });
+
+        scrollToTopBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>

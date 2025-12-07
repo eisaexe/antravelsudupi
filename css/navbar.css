@@ -1,0 +1,167 @@
+/* Define the color scheme using CSS variables */
+    :root {
+        --primary-yellow: #FFD700;
+        --secondary-yellow: #FFC107;
+        --nav-bg: #0b1220; /* dark nav */
+        --nav-text: #f3f4f6;
+        --light-bg: #F8F8F8;
+        --off-white: #FAFAFA;
+        --card-bg: #F5F5F5;
+        --medium-gray: #E0E0E0;
+        --dark-text: #333333;
+        --muted-text: #666666;
+    }
+
+    /* Header styles */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0.6rem 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        background: linear-gradient(90deg, rgba(11,18,32,1) 0%, rgba(28,36,50,1) 100%); /* dark gradient */
+        color: var(--nav-text);
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+        box-shadow: 0 4px 18px rgba(2,6,23,0.6);
+    }
+
+    /* logo sizing */
+    .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 12px; /* space between logo image and text */
+    }
+    .logo img {
+        height: 44px;
+        width: auto;
+        max-width: 170px; /* fits nav */
+        object-fit: contain;
+    }
+
+    /* new brand text beside logo */
+    .nav-brand {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1;
+    }
+
+    .site-name {
+        color: var(--nav-text);
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+    }
+
+    /* ensure navbar brand doesn't shrink on small screens */
+    @media (max-width: 960px) {
+        .logo img { height: 40px; }
+        .site-name { font-size: 0.95rem; }
+    }
+
+    /* Desktop Navigation Styles */
+    nav a {
+        color: var(--nav-text);
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 14px;
+        margin-left: 0.5rem;
+        border-radius: 6px;
+        position: relative;
+        transition: color 0.25s ease, background-color 0.25s ease;
+    }
+
+    nav a:hover {
+        color: #081018;
+        background-color: var(--primary-yellow);
+    }
+
+    nav a.active {
+        color: #081018;
+        background-color: var(--primary-yellow);
+    }
+
+    /* remove/hide burger (three-line) UI entirely */
+    .burger {
+        display: none !important;
+    }
+
+    /* remove bars styling (no-op if burger absent) */
+    .burger .bar,
+    .burger .bar1,
+    .burger .bar2,
+    .burger .bar3 {
+        display: none !important;
+    }
+
+    /* --- Mobile Responsive Styles (simplified) --- */
+    @media (max-width: 960px) {
+        /* show nav as a simple stacked list on small screens */
+        nav#main-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-end; /* keep links on the right like desktop */
+            padding: 8px 12px;
+            background: transparent;
+            position: static;
+            width: auto;
+            height: auto;
+            box-shadow: none;
+            border-left: none;
+            transform: none;
+            visibility: visible;
+        }
+
+        /* make links full-width for easier tapping */
+        nav#main-nav a {
+            width: auto;
+            padding: 10px 12px;
+            margin: 0;
+            display: inline-block;
+            text-align: right;
+        }
+
+        /* reduce logo/brand size slightly */
+        .logo img { height: 40px; }
+        .site-name { font-size: 0.95rem; }
+    }
+
+    /* Force horizontal layout and compact sizing for nav links */
+    nav#main-nav,
+    nav.horizontal-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        margin-left: auto; /* push nav to the right of logo */
+        flex-wrap: wrap;   /* allow wrapping on very small screens */
+    }
+
+    /* compact link sizing */
+    nav#main-nav a {
+        font-size: 0.9rem;       /* slightly smaller text */
+        padding: 6px 10px;       /* reduced padding */
+        margin-left: 0;          /* removed earlier left margin for consistent spacing */
+        white-space: nowrap;     /* keep each label on one line */
+    }
+
+    /* ensure good tap target on very small screens while preserving horizontal layout */
+    @media (max-width: 480px) {
+        nav#main-nav {
+            gap: 8px;
+            justify-content: flex-end;
+        }
+        nav#main-nav a {
+            font-size: 0.85rem;
+            padding: 6px 8px;
+        }
+    }

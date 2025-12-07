@@ -1,0 +1,43 @@
+/* Floating Button Styles */
+    /* These styles depend on the color variables (--primary-blue, --dark-blue) from your main CSS */
+    :root {
+            --primary-yellow: #FFD700;
+            --secondary-yellow: #FFC107;
+            --light-bg: #F8F8F8;
+            --off-white: #FAFAFA;
+            --dark-text: #333333;
+        }
+    
+    .float-button {
+        position: fixed;
+        bottom: 20px;
+        width: 56px;
+        height: 56px;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 24px;
+        z-index: 999;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-yellow);
+        border: 1px solid var(--secondary-yellow);
+        box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+    }
+    .float-button:hover {
+        background-color: var(--secondary-yellow);
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(255, 215, 0, 0.4);
+    }
+    .whatsapp {
+        left: 20px;
+    }
+    .call {
+        right: 20px;
+    }
+    .scroll-to-top {
+        bottom: 90px;
+        right: 20px;
+    }
